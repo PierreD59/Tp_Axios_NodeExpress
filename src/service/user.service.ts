@@ -10,4 +10,8 @@ export default class UserService {
   getAllUsers = async (): Promise<UserModel[]> => {
     return this.#repo.getAllUsers();
   };
+
+  getUserById =async (id:number): Promise<UserModel> => {
+    return this.#repo.getUserById(id);
+  }
 }

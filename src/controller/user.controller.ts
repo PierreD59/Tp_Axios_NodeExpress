@@ -12,4 +12,10 @@ export default class UserController {
     const data = await this.service.getAllUsers();
     res.send(data);
   };
+
+  getUserById =async (req:Request, res: Response): Promise<void> => {
+    const id = req.params.id;
+    const data = await this.service.getUserById(+id);
+    res.send(data);
+  }
 }

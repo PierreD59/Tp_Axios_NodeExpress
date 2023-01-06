@@ -9,5 +9,6 @@ const controller = new UserController(service);
 
 const router = express.Router();
 router.get("/", controller.getAllUsers);
+router.get("/:id", controller.getUserById);
 
 export default router;

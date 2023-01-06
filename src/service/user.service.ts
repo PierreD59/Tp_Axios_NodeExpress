@@ -11,7 +11,12 @@ export default class UserService {
     return this.#repo.getAllUsers();
   };
 
-  getUserById =async (id:number): Promise<UserModel> => {
+  getUserById = async (id: number): Promise<UserModel> => {
     return this.#repo.getUserById(id);
-  }
+  };
+
+  addNewUser = async (lastName: string, firstName: string, birthDate:string, nationnality:string): Promise<UserModel> => {
+    const data = new UserModel(lastName, firstName, birthDate, nationnality);
+    return this.#repo.addNewUser(data);
+  };
 }

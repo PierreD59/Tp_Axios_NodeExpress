@@ -2,19 +2,35 @@
   "users": [
     {
       "id": 1,
-      "lastname": "Doe",
-      "firstname": "John",
+      "lastName": "Doe",
+      "firstName": "John",
       "birtDate": "15/05/1994",
       "registrationDate": "06-01-2023 13:58:00",
       "nationnality": "française"
     },
     {
       "id": 2,
-      "lastname": "Onyme",
-      "firstname": "Anne",
+      "lastName": "Onyme",
+      "firstName": "Anne",
       "birtDate": "05/04/1985",
       "registrationDate": "06-01-2023 13:58:00",
       "nationnality": "française"
+    },
+    {
+      "lastName": "Heymar",
+      "firstName": "Jean",
+      "birthDate": "05/10/1990",
+      "registrationDate": "6-1-2023 15:8:8",
+      "nationnality": "belge",
+      "id": 3
+    },
+    {
+      "lastName": "Lescasse",
+      "firstName": "Sam",
+      "birthDate": "",
+      "registrationDate": "6-1-2023 15:8:35",
+      "nationnality": "",
+      "id": 4
     }
   ]
 }

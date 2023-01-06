@@ -1,19 +1,20 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "lastname": "Doe",
+      "firstname": "John",
+      "birtDate": "15/05/1994",
+      "registrationDate": "06-01-2023 13:58:00",
+      "nationnality": "française"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "lastname": "Onyme",
+      "firstname": "Anne",
+      "birtDate": "05/04/1985",
+      "registrationDate": "06-01-2023 13:58:00",
+      "nationnality": "française"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

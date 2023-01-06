@@ -27,4 +27,8 @@ export default class UserRepository {
   updateUser = async (id: number, item: UserModel): Promise<UserModel> => {
     return axios.put(`${this.#URL}/${id}`, item).then((res) => res.data);
   }
+
+  patchUser = async (id: number, item: UserModel): Promise<UserModel> => {
+    return axios.patch(`${this.#URL}/${id}`, item).then((res) => res.data);
+  }
 }

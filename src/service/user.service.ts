@@ -32,14 +32,33 @@ export default class UserService {
   updateUser = async (id: number, item: UserModel): Promise<UserModel> => {
     if (item.id !== id) {
       throw "Objet corrompue";
-    } 
-    if (await this.getUserById(id))
-    {
-      return this.addNewUser(item.lastName, item.firstName, item.birthDate, item.nationnality);
+    }
+    if (await this.getUserById(id)) {
+      return this.addNewUser(
+        item.lastName,
+        item.firstName,
+        item.birthDate,
+        item.nationnality
+      );
     } else {
-      const data = new UserModel(item.lastName, item.firstName, item.birthDate, item.nationnality)
+      const data = new UserModel(
+        item.lastName,
+        item.firstName,
+        item.birthDate,
+        item.nationnality
+      );
       data.registrationDate = (await this.getUserById(id)).registrationDate;
       return this.#repo.updateUser(id, data).catch((err) => err);
     }
   };
+
+  patchUser =async (id:number, item: UserModel): Promise<UserModel> => {
+    const user = await this.getUserById(id);
+    user.lastName = item.lastName;
+    user.firstName = item.firstName;
+    user.birthDate = item.birthDate;
+    user.nationnality = item.nationnality;
+    const data = this.#repo.patchUser(id, user).catch((err) => err);
+    return data;
+  }
 }

@@ -15,7 +15,7 @@ export default class UserController {
   };
 
   getUserById = async (req: Request, res: Response): Promise<void> => {
-    const id: number = Number(req.params.id);
+    const id: number = +req.params.id;
     const data = await this.service.getUserById(id);
     res.send(data);
   };
@@ -35,7 +35,7 @@ export default class UserController {
   };
 
   deleteUser = (req: Request, res: Response): void => {
-    const id: number = Number(req.params.id);
+    const id: number = +req.params.id;
     this.service
       .deleteUser(id)
       .then((data) => {
@@ -53,5 +53,12 @@ export default class UserController {
     } catch (err) {
       res.send(err);
     }
+  };
+
+  patchUser = async (req: Request, res: Response): Promise<void> => {
+    const id: number = +req.params.id;
+    const body: UserModel = req.body;
+    const data: UserModel = await this.service.patchUser(id, body);
+    res.send(data);
   };
 }

@@ -13,5 +13,6 @@ router.get("/:id", controller.getUserById);
 router.post("/", controller.addNewUser);
 router.delete("/:id", controller.deleteUser);
 router.put("/:id", controller.updateUser);
+router.patch("/:id", controller.patchUser);
 
 export default router;

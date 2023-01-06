@@ -23,6 +23,14 @@
       "registrationDate": "6-1-2023 15:54:39",
       "nationnality": "french",
       "id": 3
+    },
+    {
+      "lastName": "Barre",
+      "firstName": "Lenny",
+      "birthDate": "14/02/1989",
+      "registrationDate": "6-1-2023 16:30:11",
+      "nationnality": "Quebecois",
+      "id": 4
     }
   ]
 }

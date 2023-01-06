@@ -6,6 +6,7 @@
 
 export default class UserModel {
 
+  id!: number;
   lastName: string;
   firstName: string;
   birthDate?: string;

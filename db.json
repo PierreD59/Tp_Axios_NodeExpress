@@ -20,17 +20,9 @@
       "lastName": "Heymar",
       "firstName": "Jean",
       "birthDate": "05/10/1990",
-      "registrationDate": "6-1-2023 15:8:8",
-      "nationnality": "belge",
+      "registrationDate": "6-1-2023 15:54:39",
+      "nationnality": "french",
       "id": 3
-    },
-    {
-      "lastName": "Lescasse",
-      "firstName": "Sam",
-      "birthDate": "",
-      "registrationDate": "6-1-2023 15:8:35",
-      "nationnality": "",
-      "id": 4
     }
   ]
 }
